@@ -1,5 +1,4 @@
 import pandas as pd
-import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def load_data(file_path:str) -> pd.DataFrame:
@@ -13,10 +12,11 @@ def basic_cleaning(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-def vectorize_data(data: pdf.DataFrame) -> pd.DataFrame:
-    vectorizer = TfidfCevtorizer(max_features = 20000
-                                 min_df = 5,
-                                 max_df = 0.8)
+# def vectorize_data(data: pd.DataFrame) -> pd.DataFrame:
+#     vectorizer = TfidfVectorizer(max_features = 20000
+#                                  min_df = 5,
+#                                  max_df = 0.8)
+#     x = vectorizer.fit_transform()
 
 def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
     data = basic_cleaning(data)
