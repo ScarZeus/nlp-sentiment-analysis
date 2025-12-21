@@ -4,6 +4,7 @@ from src.preprocessing import (
     vectorize_data,
     encode_data
 )
+from src.train import tokenize_text
 from sklearn.model_selection import train_test_split
 
 def main():
@@ -27,8 +28,8 @@ def main():
 
     y_train_enc, y_test_enc = encode_data(y_train, y_test)
 
-    print(X_train_vec.shape, X_test_vec.shape)
-    print(y_train_enc.shape, y_test_enc.shape)
+
+    train_tokens, test_tokens = tokenize_text(X_train,X_test)
 
 if __name__ == "__main__":
     main()
