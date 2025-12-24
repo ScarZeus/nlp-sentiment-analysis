@@ -1,8 +1,8 @@
-from transformers import BertTokenizer
+from transformers import AutoTokenizer,AutoModelForSequenceClassification
 import pandas as pd
 
 
-tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 def tokenize_text(train_texts, test_texts):
     train_encodings = tokenizer(
         train_texts.tolist(),
@@ -21,3 +21,4 @@ def tokenize_text(train_texts, test_texts):
     )
 
     return train_encodings, test_encodings
+2
